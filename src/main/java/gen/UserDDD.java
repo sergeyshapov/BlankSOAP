@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="lastname" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
@@ -29,15 +30,42 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserDDD", namespace = "http://kz.sergeyshapov/user", propOrder = {
+    "lastname",
     "name",
     "age"
 })
 public class UserDDD {
 
     @XmlElement(namespace = "http://kz.sergeyshapov/user", required = true)
+    protected String lastname;
+    @XmlElement(namespace = "http://kz.sergeyshapov/user", required = true)
     protected String name;
     @XmlElement(namespace = "http://kz.sergeyshapov/user")
     protected int age;
+
+    /**
+     * Gets the value of the lastname property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * Sets the value of the lastname property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLastname(String value) {
+        this.lastname = value;
+    }
 
     /**
      * Gets the value of the name property.

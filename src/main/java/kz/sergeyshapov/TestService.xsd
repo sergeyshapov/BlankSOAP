@@ -9,8 +9,10 @@
 
     <xs:complexType name="UserDDD">
         <xs:sequence>
+            <xs:element id="lastname" name="lastname" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
             <xs:element id="name" name="name" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
             <xs:element id="age" name="age" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false"/>
+
         </xs:sequence>
     </xs:complexType>
 
