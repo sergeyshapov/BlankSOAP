@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="userId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,12 +29,15 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserResponse", namespace = "http://kz.sergeyshapov/user", propOrder = {
-    "userId"
+    "userId",
+    "userName"
 })
 public class UserResponse {
 
     @XmlElement(namespace = "http://kz.sergeyshapov/user")
     protected int userId;
+    @XmlElement(namespace = "http://kz.sergeyshapov/user", required = true)
+    protected String userName;
 
     /**
      * Gets the value of the userId property.
@@ -49,6 +53,30 @@ public class UserResponse {
      */
     public void setUserId(int value) {
         this.userId = value;
+    }
+
+    /**
+     * Gets the value of the userName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * Sets the value of the userName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUserName(String value) {
+        this.userName = value;
     }
 
 }

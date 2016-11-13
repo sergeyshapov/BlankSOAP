@@ -27,6 +27,7 @@
     <xs:complexType name="UserResponse">
         <xs:sequence>
             <xs:element id="userId" name="userId" type="xs:int"/>
+            <xs:element id="userName" name="userName" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
