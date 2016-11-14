@@ -13,6 +13,9 @@ import javax.jws.soap.SOAPBinding;
 /**
  * Created by Sergey on 13.11.2016.
  */
+//22222222222
+//22222222222
+//22222222222
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface UserServiceWS
