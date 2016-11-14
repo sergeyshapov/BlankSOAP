@@ -1,5 +1,7 @@
 package intf;
-
+/*
+просто так
+*/
 import gen.UserDDD;
 import gen.UserResponse;
 
@@ -15,7 +17,9 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface UserServiceWS
 {
-    @WebMethod(operationName="createUser")
+    @WebMethod(operationName="createUser1")
     @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL, parameterStyle = SOAPBinding.ParameterStyle.BARE)
     public UserResponse CreateUser(@WebParam(mode = WebParam.Mode.IN) UserDDD userDDD);
+  
 }
+// Проверка связи
