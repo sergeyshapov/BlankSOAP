@@ -10,6 +10,7 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
+//33333333
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
@@ -21,3 +22,5 @@ public interface UserServiceWS
   
 }
 // Проверка связи
+//222222
+//222222
