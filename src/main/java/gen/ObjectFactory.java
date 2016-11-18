@@ -35,6 +35,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Sports }
+     * 
+     */
+    public Sports createSports() {
+        return new Sports();
+    }
+
+    /**
+     * Create an instance of {@link SportType }
+     * 
+     */
+    public SportType createSportType() {
+        return new SportType();
+    }
+
+    /**
      * Create an instance of {@link GetUser }
      * 
      */

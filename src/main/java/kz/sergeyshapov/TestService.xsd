@@ -3,7 +3,9 @@
            targetNamespace="http://kz.sergeyshapov/user"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tns="http://kz.sergeyshapov/user"
-           elementFormDefault="qualified">
+           elementFormDefault="qualified"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           jaxb:version="2.0">
     <xs:element name="user" type="tns:UserDDD"/>
     <xs:element name="userResponse" type="tns:UserResponse"/>
 
@@ -12,7 +14,6 @@
             <xs:element id="lastname" name="lastname" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
             <xs:element id="name" name="name" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
             <xs:element id="age" name="age" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false"/>
-
         </xs:sequence>
     </xs:complexType>
 
@@ -30,4 +31,19 @@
             <xs:element id="userName" name="userName" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="sportType">
+        <xs:attribute name="type" type="xs:string" />
+        <xs:attribute name="gender" type="xs:string" />
+    </xs:complexType>
+
+    <xs:element name="sports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sport" minOccurs="0" maxOccurs="unbounded"
+                         type="tns:sportType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>

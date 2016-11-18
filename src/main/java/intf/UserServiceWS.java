@@ -2,6 +2,8 @@ package intf;
 /*
 просто так
 */
+import gen.SportType;
+import gen.Sports;
 import gen.UserDDD;
 import gen.UserResponse;
 
@@ -25,7 +27,12 @@ public interface UserServiceWS
     @WebMethod(operationName="createUser1")
     @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL, parameterStyle = SOAPBinding.ParameterStyle.BARE)
     public UserResponse CreateUser(@WebParam(mode = WebParam.Mode.IN) UserDDD userDDD);
-  
+
+    @WebMethod(operationName="createCreateSport")
+    @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL, parameterStyle = SOAPBinding.ParameterStyle.BARE)
+    public SportType CreateSport(@WebParam(mode = WebParam.Mode.IN) SportType sportType);
+
+
 }
 // Проверка связи
 //222222
